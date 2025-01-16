@@ -1,20 +1,11 @@
 import { useEffect, useRef } from 'react'
-import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin'
 import './index.scss'
-import gsap from 'gsap-trial'
 
 const Leaves = () => {
   const bgRef = useRef()
 
   useEffect(() => {
-    gsap.registerPlugin(DrawSVGPlugin)
-
-    gsap
-      .timeline()
-      .to(bgRef.current, {
-        duration: 1,
-        opacity: 1,
-      })
+    bgRef.current.classList.add('animate-fade-in');
   }, [])
 
   return (
