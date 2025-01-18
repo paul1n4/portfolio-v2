@@ -1,11 +1,10 @@
-.nav-bar{
+.sidebar{
+  // border: 2px solid black;
+  grid-area: sidebar;
   background: #5C6641;
-  width: 60px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  z-index: 3;
-  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   .logo {
     display: block;
@@ -20,22 +19,17 @@
   }
 
   nav {
-    display: block;
-    text-align: center;
-    position: absolute;
-    height: 210px;
-    top: 50%;
-    margin-top: -120px;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    gap: 20px;
 
     a {
       font-size: 22px;
       color: #939580;
-      display: block;
-      line-height: 51px;
-      height: 51px;
-      position: relative;
       text-decoration: none;
+      text-align: center;
+      position: relative;
 
       i {
         transition: all 0.3s ease-out;
@@ -105,10 +99,10 @@
   }
 
   ul {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    display: block;
+    // position: absolute;
+    // bottom: 20px;
+    // width: 100%;
+    // display: block;
     padding: 0;
     list-style: none;
     text-align: center;

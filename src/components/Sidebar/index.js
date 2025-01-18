@@ -6,7 +6,7 @@ import { faBriefcase, faEnvelope, faGear, faHome, faUser } from '@fortawesome/fr
 
 const Sidebar = () => {
   return (
-    <div className='nav-bar'>
+    <div className='sidebar'>
       <Link className='logo' to='/'>
         <img src={LogoPV} alt='logo' />
       </Link> 
