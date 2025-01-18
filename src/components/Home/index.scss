@@ -4,6 +4,35 @@
   justify-content: center;
   padding: 50px;
   
+  @media (max-width: 768px) {
+    padding: 25px;
+
+    .text-zone {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+      h1 {
+        font-size: 32px;
+      }
+  
+      h2 {
+        font-size: 14px;
+      }
+  
+      p {
+        font-size: 14px;
+        text-align: center;
+      }
+  
+      .flat-button {
+        padding: 8px 16px;
+        margin: 0 30px;
+        font-size: 12px;
+        text-align: center;
+      }
+    }
+  }
 
   .text-zone {
     // position: absolute;
@@ -26,14 +55,15 @@
   h2 {
     color: #8d8d8d;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 3px;
     animation: fadeIn 1s 1.8s backwards;
     text-align: center;
   }
 
   p {
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 400;
     margin-bottom: 25px;
   }
 

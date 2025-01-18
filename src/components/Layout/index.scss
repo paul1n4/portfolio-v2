@@ -1,9 +1,17 @@
 .App {
   display: grid;
-  grid-template-columns: 60px 1fr;
+  grid-template-columns: 70px 1fr;
   grid-template-rows: 1fr;
   block-size: 100vh;
   grid-template-areas: "sidebar container";
+
+  // @media (max-width: 768px) {
+  //   grid-template-columns: 1fr;
+  //   grid-template-rows: auto 1fr;
+  //   grid-template-areas: 
+  //     "sidebar"
+  //     "container";
+  // }
 
   .page {
     //border: 2px solid blue;
@@ -12,7 +20,7 @@
   }
   
   .container {
-    //border: 1px solid red;
-    margin: 10px;
+    // border: 1px solid red;
+    // margin: 10px;
   }
 }
