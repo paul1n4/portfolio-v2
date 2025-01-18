@@ -22,5 +22,12 @@
   .container {
     // border: 1px solid red;
     // margin: 10px;
+    padding: 50px;
   }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 25px;
+    }
+  } 
 }
