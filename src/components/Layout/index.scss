@@ -1,9 +1,29 @@
 .App {
   display: grid;
   grid-template-columns: 70px 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: 100vh;
   block-size: 100vh;
   grid-template-areas: "sidebar container";
+
+  .page {
+    //border: 5px solid blue;
+    grid-area: container;
+    display: flex;
+    overflow: auto;
+  }
+  
+  .container {
+    //border: 2px solid red;
+    // margin: 10px;
+    margin: 60px;
+    flex-grow: 1;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      margin: 25px;
+    }
+  } 
 
   // @media (max-width: 768px) {
   //   grid-template-columns: 1fr;
@@ -12,22 +32,4 @@
   //     "sidebar"
   //     "container";
   // }
-
-  .page {
-    //border: 2px solid blue;
-    grid-area: container;
-    display: flex;
-  }
-  
-  .container {
-    // border: 1px solid red;
-    // margin: 10px;
-    padding: 50px;
-  }
-
-  @media (max-width: 768px) {
-    .container {
-      padding: 25px;
-    }
-  } 
 }
