@@ -1,0 +1,43 @@
+.projects-page{
+  padding-bottom: 32px;
+
+  h2 {
+    font-size: 53px;
+    font-weight: 400;
+    font-family: 'Pistilli', serif;
+    text-align: center;
+  }
+
+  .projects-list {
+    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 16px;
+    
+  }
+
+  .spacer {
+    height: 32px; /* Adjust to desired spacing */
+  }
+
+  // @media (max-width: 1284px) {
+  //   .projects-list {
+  //     > *:last-child {
+  //       margin-bottom: 32px;
+  //     }
+  //   }
+  // }
+
+  @media (max-width: 480px) {
+    
+    h2 {
+      font-size: 32px;
+    }
+
+    .projects-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+  }
+}
