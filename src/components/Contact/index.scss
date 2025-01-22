@@ -1,6 +1,4 @@
 .contact-page {
-  //border: 5px solid green;
-
   h2 {
     font-size: 53px;
     font-weight: 400;
@@ -11,6 +9,11 @@
   .contact-container {
     display: flex;
     gap: 24px;
+
+    .contact-text,
+    .form-container {
+      flex: 1;
+    }
     
     .contact-text {
       p {
@@ -121,7 +124,7 @@
   @media (max-width: 480px) {
     
     h2 {
-      font-size: 32px;
+      font-size: 40px;
     }
     .contact-container {
 

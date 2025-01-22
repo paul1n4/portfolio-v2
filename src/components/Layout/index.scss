@@ -6,30 +6,19 @@
   grid-template-areas: "sidebar container";
 
   .page {
-    //border: 5px solid blue;
     grid-area: container;
     display: flex;
     overflow: auto;
   }
   
   .container {
-    //border: 2px solid red;
-    // margin: 10px;
     margin: 60px;
     flex-grow: 1;
   }
 
   @media (max-width: 768px) {
     .container {
-      margin: 25px;
+      margin: 30px;
     }
   } 
-
-  // @media (max-width: 768px) {
-  //   grid-template-columns: 1fr;
-  //   grid-template-rows: auto 1fr;
-  //   grid-template-areas: 
-  //     "sidebar"
-  //     "container";
-  // }
 }
