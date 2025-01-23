@@ -1,8 +1,34 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './index.scss'
 import { faBehance, faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { useRef } from 'react'
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
+  const form = useRef()
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+    
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        form.current,
+        {publicKey: process.env.REACT_APP_PUBLIC_KEY}
+      )
+      .then(
+        () => {
+          alert('Message successfully sent!')
+          window.location.reload(false)
+          //console.log('SUCCESS!');
+        },
+        (error) => {
+          alert('Failed to send the message, please try again')
+          //console.log('FAILED...', error.text);
+        },
+      )
+  }
   return (
     <div className='container contact-page'>
       <h2>Contact Me</h2>
@@ -30,9 +56,9 @@ const Contact = () => {
         </div>
         
         <div className='form-container'>
-          <form>
+          <form ref={form} onSubmit={sendEmail}>
             <div className='half-input'>
-              <input type='text' name='name' placeholder='Name' required/>
+              <input type='text' name='from_name' placeholder='Name' required/>
               <input type='email' name='email' placeholder='Email' required/>
             </div>
            
