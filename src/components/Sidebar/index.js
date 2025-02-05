@@ -30,7 +30,7 @@ const Sidebar = () => {
       </nav>   
 
       <ul>
-        <li>
+        {/* <li>
           <a rel='noreferrer' href='/'>EN</a>
         </li>
         <li>
@@ -38,7 +38,7 @@ const Sidebar = () => {
         </li>
         <li>
           <a rel='noreferrer' href='/'>ES</a>
-        </li>
+        </li> */}
       </ul>
 
     </div>

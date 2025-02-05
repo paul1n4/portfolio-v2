@@ -20,7 +20,7 @@ const Contact = () => {
       .then(
         () => {
           alert('Message successfully sent!')
-          window.location.reload(false)
+          form.current.reset();
           //console.log('SUCCESS!');
         },
         (error) => {
@@ -35,22 +35,31 @@ const Contact = () => {
       <div className='contact-container'>
         <div className='contact-text'>
           <p>I'd love to hear from you! Whether you have a project in mind, a question about my work, or just want to connect. </p>
-          <div className='contact-media'>
-            
+          <div className='contact-media-list'>
+            <div className='contact-media'>
               <a target='_blank' rel='noreferrer' href='https://www.linkedin.com/in/paulinevalero/'>
-                <FontAwesomeIcon icon={faLinkedinIn} />
+                <span className='contact-media-svg'>
+                  <FontAwesomeIcon icon={faLinkedinIn} />
+                </span>
                 <span>/linkedin</span>
-                </a>
-          
+              </a>
+            </div>
+            <div className='contact-media'>
               <a target='_blank' rel='noreferrer' href='https://github.com/paul1n4'>
-                <FontAwesomeIcon icon={faGithub} />
+                <span className='contact-media-svg'>
+                  <FontAwesomeIcon icon={faGithub} />
+                </span>
                 <span>/github</span>
               </a>
-          
+            </div>
+            <div className='contact-media'>
               <a target='_blank' rel='noreferrer' href='https://www.behance.net/paulinevalero'>
-                <FontAwesomeIcon icon={faBehance} />
+                <span className='contact-media-svg'>
+                  <FontAwesomeIcon icon={faBehance} />
+                </span>
                 <span>/behance</span>
               </a>
+            </div>
             
           </div>
         </div>
