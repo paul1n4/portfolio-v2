@@ -1,4 +1,5 @@
-import './index.scss'
+import './ProjectCollapse.scss'
+
 export default function ProjectCollapse({project}){
 
   const {image, name, link} = project

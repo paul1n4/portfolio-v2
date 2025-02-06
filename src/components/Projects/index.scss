@@ -8,12 +8,17 @@
     text-align: center;
   }
 
-  .projects-list {
+  .projects-list-collapse {
     margin-bottom: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 16px;
     
+  }
+
+  .projects-list-detail{
+    //border: 1px solid blue;
+    display: block;
   }
 
   .spacer {
