@@ -7,16 +7,20 @@ const ProjectDetail = ({project}) => {
   const imagePath = require(`../../../assets/images/${image}.png`)
   return(
     <div className='project-detail'>
-      <img src={imagePath} alt={name}/>
+      <a href={link} target='_blank' rel='noreferrer'>
+        <img src={imagePath} alt={name}/>
+      </a>
       <div className='project-info'>
         <h3>{name}</h3>
         <p>{description}</p>
-        <a href={link} target='_blank' rel='noreferrer'>Visit Site</a>
-        {githubLink === '' ? '' : (
-          <a href={githubLink} target='_blank' rel='noreferrer' >
-            <FontAwesomeIcon icon={faGithub} />
-          </a>
-        )}
+        <div className='project-links'>
+          <a href={link} target='_blank' rel='noreferrer'>Visit Site</a>
+          {githubLink === '' ? '' : (
+            <a href={githubLink} target='_blank' rel='noreferrer' className='github-link'>
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+          )}
+        </div>
       </div>
     </div>
   )

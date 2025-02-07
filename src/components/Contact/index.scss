@@ -80,9 +80,11 @@
           padding: 16px 12px;
           background: rgba($color: #C79273, $alpha: 0.2);
           outline-color: #BB7154;
+          font-size: 16px;
 
           &::placeholder {
             color: #775845;
+            font-size: 16px;
           }
         }
 

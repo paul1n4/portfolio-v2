@@ -5,21 +5,30 @@ import { useState } from 'react'
 import ProjectDetail from './Project/ProjectDetail'
 
 const Projects = () => {
-  const [isTrue, setTrue] = useState(false)
+  const [toggled, setToggled] = useState(true)
 
   return (
     <div className='container projects-page'>
       <h2>Projects</h2>
-      {/* </div><div className='projects-list'> */}
-      <div className={isTrue? 'projects-list-collapse' : 'projects-list-detail'}>
+      <div className='toggle-container'>
+        <p style={{color: toggled ? '#8c9a90' : '#566866', fontWeight: toggled ? 400 : 500}}>Collapse</p>
+        <button 
+          className={`toggle-btn ${toggled ? 'toggled' : ''}`}
+          onClick={()=> setToggled(!toggled)}
+        >
+          <div className='thumb'></div>
+        </button>
+        <p style={{color: toggled ? '#566866' : '#8c9a90', fontWeight: toggled ? 500 : 400}}>Details</p>
+      </div>
+      <div className={toggled ? 'projects-list-detail' : 'projects-list-collapse'}>
         {db.map(project => (
-          isTrue ? (
-            <ProjectCollapse 
+          toggled ? (
+            <ProjectDetail 
               key={project.id}
               project={project}
             />
           ) : (
-            <ProjectDetail 
+            <ProjectCollapse 
               key={project.id}
               project={project}
             />
