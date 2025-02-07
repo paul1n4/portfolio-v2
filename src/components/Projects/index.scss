@@ -81,10 +81,18 @@
       font-size: 40px;
     }
 
-    .projects-list {
+    .projects-list-collapse {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 16px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-page {
+    .toggle-container {
+      justify-content: center;
     }
   }
 }

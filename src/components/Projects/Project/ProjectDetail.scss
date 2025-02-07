@@ -50,3 +50,22 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .project-detail {
+    flex-direction: column;
+    margin-bottom: 80px;
+    
+    a {
+      width: 100%;
+    }
+
+    .project-info {
+      text-align: center;
+
+      .project-links {
+        justify-content: center;
+      }
+    }
+  }
+}
